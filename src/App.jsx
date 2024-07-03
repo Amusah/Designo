@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import './index.scss'
+import React from 'react';
+// import './index.scss'
+
+import Homepage from './pages/Homepage';
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className={`${styles.textColor}`}>
-      Hello react
+    <>
+    <div className='mainPadding'>
+      <Homepage />
     </div>
+    </>
   )
 }
 
