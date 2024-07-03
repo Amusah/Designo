@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.navLogo {
+  width: 19.6rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+}
+
+.navLinks {
+  display: flex;
+  // justify-content: space-evenly;
+
+  li{
+    list-style: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--darkGrey);
+    
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.mr{
+  margin-right: 5rem;
+}
