@@ -57,11 +57,15 @@ body {
   padding: 0 10rem;
 }
 
-.show{
-  display: flex;
-  // transform: translateY(150%);
-  transition: transform .6s ease-in-out;
-  animation: showNav .6s ease-in-out;
+.displayNav{
+  // display: flex;
+  transform: translateX(-100%);
+  // transition: transform .6s ease-in-out;
+  // animation: slideInNav .6s ease-in-out;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 @media screen and (width <= 820px) {
@@ -76,14 +80,26 @@ body {
   }
 }
 
-@keyframes showNav{
-  0%{
-    opacity: 0;
-    transform: translateY(-20rem);
-  }
+// @keyframes slideInNav{
+//   0%{
+//     opacity: 0;
+//     transform: translateX(40rem);
+//   }
 
-  100%{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+//   100%{
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// @keyframes slideOutNav{
+//   0%{
+//     opacity: 0;
+//     transform: translateX(-40rem);
+//   }
+
+//   100%{
+//     opacity: 0;
+//     transform: translateX(0);
+//   }
+// }

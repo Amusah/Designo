@@ -2,10 +2,10 @@ import React from 'react'
 
 import Navbar from '../Components/Navbar'
 
-function Homepage() {
+function Homepage({ toggle, setToggle}) {
   return (
     <main>
-      <Navbar />
+      <Navbar toggle={toggle} setToggle={setToggle} />
     </main>
   )
 }
