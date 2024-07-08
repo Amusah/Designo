@@ -4,7 +4,10 @@ import { navLinks } from "../constants";
 import { shared } from "../assets";
 import styles from "./Navbar.module.scss";
 
-const [{ logoDark, logoLight }, { close, hamburger }] = shared;
+// const [{ logoDark, logoLight }, { close, hamburger }] = shared;
+
+const { logoDark, logoLight } = shared.desktop;
+const { close, hamburger } = shared.mobile;
 
 
 

@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import Navbar from '../Components/Navbar'
+import Navbar from '../Components/Navbar';
+import Hero from '../Components/Hero';
 
 function Homepage({ toggle, setToggle}) {
   return (
-    <main>
+    <div>
       <Navbar toggle={toggle} setToggle={setToggle} />
-    </main>
+      <Hero />
+    </div>
   )
 }
 

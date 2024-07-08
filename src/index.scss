@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Jost", sans-serif;
+  background-color: var(--white);
 }
 
 // colors
@@ -27,52 +28,56 @@ body {
   --lightGrey: #f1f3f5;
 }
 
-@mixin body-font() {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  font-weight: 400;
-}
+// @-moz-document url-prefix() { 
+//   body {
+//      background-color: lime;
+//   }
+// }
 
-@mixin font-h1() {
-  font-size: 4.8rem;
-  line-height: 4.8rem;
-  font-weight: 500;
-}
-
-@mixin font-h2() {
-  font-size: 4rem;
-  line-height: 4.8rem;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-
-@mixin font-h3() {
-  font-size: 2rem;
-  line-height: 2.6rem;
-  letter-spacing: 5px;
-  font-weight: 500;
-}
 
 .container {
-  padding: 0 10rem;
+  padding: 0 15rem;
 }
 
 .displayNav{
-  // display: flex;
-  transform: translateX(-100%);
+  display: flex;
+  // transform: translateX(-100%);
   // transition: transform .6s ease-in-out;
-  // animation: slideInNav .6s ease-in-out;
+  animation: slideInNav .6s ease-in-out;
 }
 
 .cursor-pointer{
   cursor: pointer;
 }
 
-@media screen and (width <= 820px) {
-  .container {
+.btn-hover:hover{
+  background-color: var(--lightPeach);
+  color: var(--white);
+}
+
+@media screen and (width <= 1450px){
+  .container{
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (width <= 1290px){
+  .container{
     padding: 0 5rem;
   }
 }
+
+@media screen and (width <= 1190px){
+  .container{
+    padding: 0 3rem;
+  }
+}
+
+// @media screen and (width <= 820px) {
+//   .container {
+//     padding: 0 5rem;
+//   }
+// }
 
 @media screen and (width <= 660px){
   .container {
@@ -80,17 +85,17 @@ body {
   }
 }
 
-// @keyframes slideInNav{
-//   0%{
-//     opacity: 0;
-//     transform: translateX(40rem);
-//   }
+@keyframes slideInNav{
+  0%{
+    opacity: 0;
+    transform: translateX(40rem);
+  }
 
-//   100%{
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-// }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 // @keyframes slideOutNav{
 //   0%{
