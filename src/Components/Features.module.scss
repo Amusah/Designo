@@ -1,0 +1,82 @@
+@import "../mixins.scss";
+
+.featuresContainer {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.featureHead {
+  position: relative;
+  z-index: 9;
+}
+
+.featureBg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -3;
+}
+
+.featureBody {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  text-align: center;
+
+  h3 {
+    text-transform: uppercase;
+    @include font-h3();
+  }
+
+  p {
+    @include body-font();
+  }
+}
+
+.rotateBg3 {
+  transform: rotate(60deg);
+}
+
+.rotateBg2 {
+  transform: rotate(270deg);
+}
+
+@media screen and (width <= 850px) {
+  .featuresContainer{
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .feature {
+    flex-direction: row;
+  }
+
+  .featureBody{
+    text-align: left;
+  }
+}
+
+@media screen and (width <= 580px){
+  .featuresContainer{
+    gap: 5rem;
+  }
+  .feature{
+    flex-direction: column;
+  }
+
+  .featureBody{
+    text-align: center;
+  }
+}

@@ -12,6 +12,8 @@ import webDesignlg from "./home/desktop/image-web-design-large.jpg";
 import webDesignsm from "./home/desktop/image-web-design-small.jpg";
 import graphicDesign from "./home/desktop/image-graphic-design.jpg";
 import appDesign from "./home/desktop/image-app-design.jpg";
+import circle from "./shared/desktop/bg-pattern-small-circle.svg";
+import leaf from "./shared/desktop/bg-pattern-leaf.svg";
 
 export const home = {
   desktop: {
@@ -23,12 +25,12 @@ export const home = {
     webDesignlg,
     webDesignsm,
     graphicDesign,
-    appDesign
+    appDesign,
   },
 };
 
 export const shared = {
-  desktop: { logoDark, logoLight, rightArrow },
+  desktop: { logoDark, logoLight, rightArrow, circle, leaf },
   mobile: { close, hamburger },
 };
 

@@ -1,16 +1,20 @@
 .left{
-  width: 106rem;
-  height: 59rem;
-  background-color: var(--lightGrey);
-  border-radius: 29.7rem 29.7rem 29.7rem 0;
   position: absolute;
   left: 0%;
   top: 52%;
   z-index: -2;
 }
 
+.right{
+  position: absolute;
+  top: 33%;
+  right: -10%;
+  z-index: -5;
+  transform: rotateZ(180deg);
+}
+
 @media screen and (width <= 1080px){
-  .left{
+  .left, .right{
     display: none;
   }
 }

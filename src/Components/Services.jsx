@@ -9,7 +9,7 @@ const { rightArrow } = shared.desktop;
 
 const Services = () => {
   return (
-    <div className={styles.servicesContainer}>
+    <section className={styles.servicesContainer}>
       <div className={`${styles.service} ${styles.webDesign}`}>
         <img className={styles.img} src={webDesignlg} alt="laptop image" />
         <div className={styles.overlay}>
@@ -42,7 +42,7 @@ const Services = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
