@@ -3,6 +3,7 @@ import React from "react";
 import Button from './Button';
 import { home } from "../assets";
 import styles from './Hero.module.scss';
+import Blob from "./Blob";
 
 const { blob, phone } = home.desktop;
 
@@ -25,6 +26,7 @@ const Hero = () => {
           <img className={styles.blob} src={blob} alt="background blob image" />
         </div>
       </div>
+      <Blob type={'left'}/>
     </section>
   );
 };

@@ -80,8 +80,12 @@
     padding: 8rem 0 0;
     // overflow: visible;
     // overflow-x: hidden !important;
-  }
 
+     @-moz-document url-prefix(){
+      padding: 25rem 0 0;
+     }
+  }
+    
   .heroText {
     max-width: 100%;
     // text-align: center;
@@ -168,6 +172,9 @@
     bottom: 5%;
     // bottom: 30%;
     // z-index: 3;
+    // @-moz-document url-prefix(){
+    //   bottom: 5%
+    // }
   }
 
   .blob {
@@ -201,5 +208,15 @@
 
    .intro2{
     max-width: 80%;
+  }
+}
+
+@media screen and (width <= 470px){
+  .phone{
+    bottom: 10%;
+
+    @-moz-document url-prefix() {
+      bottom: 5%;
+    }
   }
 }

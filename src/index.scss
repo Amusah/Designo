@@ -19,12 +19,17 @@ body {
 :root {
   /*** Primary colors ***/
   --peach: #e78168;
+  --peach-rgb: rgb(231, 129, 107);
   --black: #1d1c1e;
+  --black-rgb: rgb(29, 28, 30);
   --white: #ffffff;
+  --white-rgb: rgb(255, 255, 255);
 
   /*** Secondary colors ***/
   --lightPeach: #ffad9b;
+  --lightPeach-rgb: rgb(255, 173, 155);
   --darkGrey: #333136;
+  --darkGrey-rgb: rgb(51, 49, 54);
   --lightGrey: #f1f3f5;
 }
 
@@ -37,6 +42,7 @@ body {
 
 .container {
   padding: 0 15rem;
+  // position: relative;
 }
 
 .displayNav{
