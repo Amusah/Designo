@@ -7,6 +7,7 @@
   align-items: center;
   gap: 4rem;
   position: relative;
+  padding-bottom: 15rem;
 }
 
 .feature {
@@ -57,6 +58,7 @@
   .featuresContainer{
     flex-direction: column;
     padding: 0 2rem;
+    margin-bottom: 10rem;
   }
 
   .feature {

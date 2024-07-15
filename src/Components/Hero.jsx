@@ -18,7 +18,7 @@ const Hero = () => {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about our services.
           </p>
-          <Button>Learn More</Button>
+          <Button type={'heroBtn'} color={'btnWhite'}>Learn More</Button>
         </div>
 
         <div className={styles.heroImage}>

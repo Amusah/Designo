@@ -56,6 +56,10 @@ body {
   cursor: pointer;
 }
 
+.border-radius{
+  border-radius: 1.5rem;
+}
+
 .btn-hover:hover{
   background-color: var(--lightPeach);
   color: var(--white);

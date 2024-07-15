@@ -2,9 +2,9 @@ import React from 'react';
 
 import styles from './Button.module.scss';
 
-const Button = ({ children }) => {
+const Button = ({ children, color, type }) => {
   return (
-    <button className={`${styles.btn} cursor-pointer btn-hover`}>{children}</button>
+    <button className={`${styles[color]} ${styles[type]} cursor-pointer`}>{children}</button>
   )
 }
 

@@ -1,0 +1,56 @@
+@import "../mixins.scss";
+
+.cta {
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem;
+  background-color: var(--peach);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaText {
+  h2 {
+    @include font-h2();
+    line-height: 4rem;
+  }
+
+  p {
+    max-width: 45.9rem;
+    margin-top: 1.5rem;
+    @include body-font();
+  }
+}
+
+.ctaBg {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (width <= 850px) {
+  .ctaContainer {
+    padding: 0 2rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+  }
+}
+
+@media screen and (width <= 580px) {
+  .ctaText {
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

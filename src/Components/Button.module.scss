@@ -1,16 +1,34 @@
-.btn {
+.btnWhite {
   padding: 2rem;
-  width: 15.2rem;
+  // width: 15.2rem;
   border: none;
-  border-radius: .6rem;
-  letter-spacing: .1rem;
+  border-radius: 0.6rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
   z-index: 5;
+  background-color: var(--white);
+  // cursor: pointer;
   // width: 10rem;
 
   // @-moz-document url-prefix() {
-    
+
   // }
+
+  &:hover {
+    background-color: var(--lightPeach);
+    color: var(--white);
+  }
+}
+
+.heroBtn {
+  width: 15.2rem;
+}
+
+.ctaBtn {
+  @media screen and (width <= 580px) {
+    padding: 1;
+    font-size: 1.2rem;
+  }
 }
