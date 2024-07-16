@@ -8,7 +8,10 @@
   padding: 8rem;
   background-color: var(--peach);
   color: var(--white);
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -33,6 +36,8 @@
 @media screen and (width <= 850px) {
   .ctaContainer {
     padding: 0 2rem;
+    position: relative;
+    width: 100%;
   }
 
   .cta {

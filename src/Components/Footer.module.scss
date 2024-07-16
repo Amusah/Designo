@@ -1,0 +1,158 @@
+@import "../mixins.scss";
+
+.footerContainer {
+  background-color: var(--black);
+  width: 100%;
+  padding: 15rem 0;
+  // z-index: -20;
+}
+
+.footer {
+  width: 100%;
+  // margin: 0 auto;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.navLogo {
+  width: 19.6rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+  gap: 4rem;
+
+  .link {
+    list-style: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--white);
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: rgba(134, 132, 132, 0.918);
+      text-underline-offset: 0.5rem;
+    }
+  }
+}
+
+.hr2 {
+  margin-top: 4rem;
+  border: 0.1rem solid var(--darkGrey);
+  width: 100%;
+}
+
+.hr1 {
+  @extend .hr2;
+  display: none;
+}
+
+.address {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  // align-items: flex-end;
+}
+
+.addressBox {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addressLine1 {
+  p {
+    color: rgba(134, 132, 132, 0.918);
+    @include body-font();
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.addressLine2 {
+  p {
+    color: rgba(134, 132, 132, 0.918);
+    @include body-font();
+    font-weight: 700;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+  gap: 1.5rem;
+
+  svg {
+    cursor: pointer;
+
+    path:hover {
+      fill: var(--lightPeach);
+    }
+  }
+}
+
+@media screen and (width <= 850px) {
+  .footerContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  // .footer{
+  //   padding: 0 8rem;
+  // }
+  .addressBox {
+    gap: 3rem;
+    width: 70%;
+  }
+
+  .addressLine1,
+  .addressLine2 {
+    width: 22.3rem;
+  }
+}
+
+@media screen and (width <= 620px) {
+  .footerNav {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hr2 {
+    display: none;
+  }
+
+  .hr1 {
+    display: block;
+    margin-top: 0;
+  }
+
+  .address{
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .addressBox{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+  }
+}

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Features.module.scss";
 import { features } from "../constants";
 import Blob from './Blob';
+import CTA from "./CTA";
 
 
 
@@ -23,6 +24,7 @@ const Features = () => {
         </article>
       ))}
       <Blob type={'right'} />
+      <CTA />
     </section>
   );
 };

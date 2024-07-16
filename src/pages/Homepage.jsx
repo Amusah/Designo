@@ -5,6 +5,7 @@ import Hero from "../Components/Hero";
 import Services from "../Components/Services";
 import Features from "../Components/Features";
 import CTA from "../Components/CTA";
+import Footer from "../Components/Footer";
 
 function Homepage({ toggle, setToggle }) {
   return (
@@ -14,8 +15,9 @@ function Homepage({ toggle, setToggle }) {
         <Hero />
         <Services />
         <Features />
-        <CTA />
+        {/* <CTA /> */}
       </div>
+      <Footer />
     </>
   );
 }

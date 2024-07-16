@@ -8,6 +8,7 @@
   gap: 4rem;
   position: relative;
   padding-bottom: 15rem;
+  margin-bottom: 15rem;
 }
 
 .feature {
@@ -57,8 +58,8 @@
 @media screen and (width <= 850px) {
   .featuresContainer{
     flex-direction: column;
-    padding: 0 2rem;
-    margin-bottom: 10rem;
+    padding: 0 2rem 10rem;
+    // margin-bottom: 20rem;
   }
 
   .feature {
