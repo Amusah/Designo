@@ -24,7 +24,7 @@ const Features = () => {
         </article>
       ))}
       <Blob type={'right'} />
-      <CTA />
+      {/* <CTA /> */}
     </section>
   );
 };

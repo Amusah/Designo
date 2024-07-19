@@ -4,12 +4,12 @@
   background-color: var(--black);
   width: 100%;
   padding: 15rem 0;
+  position: relative;
   // z-index: -20;
 }
 
 .footer {
   width: 100%;
-  // margin: 0 auto;
 }
 
 .footerNav {
@@ -61,7 +61,6 @@
   display: flex;
   margin-top: 4rem;
   justify-content: space-between;
-  // align-items: flex-end;
 }
 
 .addressBox {
@@ -109,9 +108,6 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  // .footer{
-  //   padding: 0 8rem;
-  // }
   .addressBox {
     gap: 3rem;
     width: 70%;
@@ -124,6 +120,12 @@
 }
 
 @media screen and (width <= 620px) {
+  .footerContainer{
+    padding-bottom: 10rem;
+  }
+  .footer{
+    margin-top: 6rem;
+  }
   .footerNav {
     flex-direction: column;
     gap: 3rem;
@@ -154,5 +156,11 @@
     text-align: center;
     width: 100%;
     align-items: center;
+  }
+}
+
+@media screen and (width <= 340px){
+  .footer{
+    margin-top: 10rem;
   }
 }
