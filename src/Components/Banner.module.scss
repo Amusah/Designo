@@ -1,0 +1,51 @@
+@import "../mixins.scss";
+
+.bannerContainer {
+  background-color: var(--peach);
+  height: 25.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  overflow: hidden;
+
+  h2 {
+    color: var(--white);
+    @include font-h1();
+  }
+
+  p {
+    color: var(--white);
+    text-align: center;
+    @include body-font();
+  }
+}
+
+.bgPatternRight {
+  position: absolute;
+  right: 0;
+  width: 70%;
+}
+
+@media screen and (width <= 660px) {
+  .bannerContainer {
+    border-radius: 0 !important;
+    height: 32rem;
+  }
+
+  .bgPatternRight {
+    width: 120rem;
+    right: 0%;
+    bottom: 5%;
+  }
+}
+
+@media screen and (width <= 480px) {
+  .bannerContainer {
+    h2 {
+      font-size: 3.2rem;
+    }
+  }
+}
