@@ -39,6 +39,11 @@ import faceit from "./app-design/desktop/image-faceit.jpg";
 import loopstudios from "./app-design/desktop/image-loopstudios.jpg";
 import todo from "./app-design/desktop/image-todo.jpg";
 
+import bgPatternIntroGraphic from './graphic-design/desktop/bg-pattern-intro-graphic.svg';
+import boxedwater from './graphic-design/desktop/image-boxed-water.jpg';
+import change from './graphic-design/desktop/image-change.jpg';
+import science from './graphic-design/desktop/image-science.jpg';
+
 
 export const home = {
   desktop: {
@@ -73,6 +78,13 @@ export const app = {
   faceit,
   loopstudios,
   todo,
+};
+
+export const graphic = {
+  bgPatternIntroGraphic,
+  boxedwater,
+  change,
+  science,
 };
 
 export const shared = {

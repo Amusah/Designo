@@ -1,9 +1,10 @@
-import { home, shared, web, app } from "../assets";
+import { home, shared, web, app, graphic } from "../assets";
 
 const { passionate, resourceful, friendly } = home.desktop;
 const { circle, facebook, instagram, twitter, pinterest, youtube } = shared.desktop;
 const { bloger, builder, camp, express, photon, transfer } = web.desktop;
 const { airfiller, eyecam, faceit, loopstudios, todo } = app;
+const { bgPatternIntroGraphic, boxedwater, change, science} = graphic;
 
 export const navLinks = [
   {
@@ -130,6 +131,29 @@ export const appProjects = [
     title: "Loopstudios",
     text: "A VR experience app made for Loopstudios",
     screenshot: loopstudios,
+  },
+];
+
+export const graphicProjects = [
+  {
+    id: 1,
+    title: "TIM BROWN",
+    text: "A book cover designed for Tim Brown’s new release, 'Change’",
+    screenshot: change,
+  },
+
+  {
+    id: 2,
+    title: "BOXED WATER",
+    text: "A simple packaging concept made for Boxed Water",
+    screenshot: boxedwater,
+  },
+
+  {
+    id: 3,
+    title: "SCIENCE!",
+    text: "A poster made in collaboration with the Federal Art Project",
+    screenshot: science,
   },
 ];
 

@@ -2,7 +2,6 @@ import React from "react";
 
 import Projects from "./Projects";
 import Card from "./Card";
-
 import { appProjects } from "../constants";
 import { home } from "../assets";
 
