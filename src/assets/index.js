@@ -8,7 +8,6 @@ import webDesignsm from "./home/desktop/image-web-design-small.jpg";
 import graphicDesign from "./home/desktop/image-graphic-design.jpg";
 import appDesign from "./home/desktop/image-app-design.jpg";
 
-
 import logoDark from "./shared/desktop/logo-dark.png";
 import logoLight from "./shared/desktop/logo-light.png";
 import close from "./shared/mobile/icon-close.svg";
@@ -25,7 +24,6 @@ import pinterest from "./shared/desktop/icon-pinterest.svg";
 import twitter from "./shared/desktop/icon-twitter.svg";
 import youtube from "./shared/desktop/icon-youtube.svg";
 
-
 import bgPatternIntroWeb from "./web-design/desktop/bg-pattern-intro-web.svg";
 import bloger from "./web-design/desktop/image-blogr.jpg";
 import builder from "./web-design/desktop/image-builder.jpg";
@@ -33,6 +31,13 @@ import camp from "./web-design/desktop/image-camp.jpg";
 import express from "./web-design/desktop/image-express.jpg";
 import photon from "./web-design/desktop/image-photon.jpg";
 import transfer from "./web-design/desktop/image-transfer.jpg";
+
+import bgPatternIntroApp from './app-design/desktop/bg-pattern-intro-app.svg';
+import airfiller from './app-design/desktop/image-airfilter.jpg';
+import eyecam from "./app-design/desktop/image-eyecam.jpg";
+import faceit from "./app-design/desktop/image-faceit.jpg";
+import loopstudios from "./app-design/desktop/image-loopstudios.jpg";
+import todo from "./app-design/desktop/image-todo.jpg";
 
 
 export const home = {
@@ -59,6 +64,15 @@ export const web = {
     photon,
     transfer
   },
+};
+
+export const app = {
+  bgPatternIntroApp,
+  airfiller,
+  eyecam,
+  faceit,
+  loopstudios,
+  todo,
 };
 
 export const shared = {

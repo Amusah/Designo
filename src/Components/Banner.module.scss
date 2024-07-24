@@ -29,6 +29,12 @@
   width: 70%;
 }
 
+.bgPatternLeft{
+  position: absolute;
+  left: 0;
+  width: 70%;
+}
+
 @media screen and (width <= 660px) {
   .bannerContainer {
     border-radius: 0 !important;
@@ -39,6 +45,12 @@
     width: 120rem;
     right: 0%;
     bottom: 5%;
+  }
+
+  .bgPatternLeft{
+    width: 120rem;
+    left: 4%;
+    bottom: -10%;
   }
 }
 

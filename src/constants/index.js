@@ -1,21 +1,25 @@
-import { home, shared, web } from "../assets";
+import { home, shared, web, app } from "../assets";
 
 const { passionate, resourceful, friendly } = home.desktop;
 const { circle, facebook, instagram, twitter, pinterest, youtube } = shared.desktop;
 const { bloger, builder, camp, express, photon, transfer } = web.desktop;
+const { airfiller, eyecam, faceit, loopstudios, todo } = app;
 
 export const navLinks = [
   {
     id: "home",
     title: "Our Company",
+    route: "about",
   },
   {
     id: "locations",
     title: "Locations",
+    route: "location",
   },
   {
     id: "contact",
     title: "Contact",
+    route: "contact",
   },
 ];
 
@@ -89,9 +93,45 @@ export const webProjects = [
     title: "Camp",
     text: "Get expert training in coding, data, design, and digital marketing",
     screenshot: camp,
-  }
+  },
 ];
 
+export const appProjects = [
+  {
+    id: 1,
+    title: "Airfilter",
+    text: "Solving the problem of poor indoor air quality by filtering the air",
+    screenshot: airfiller,
+  },
+
+  {
+    id: 2,
+    title: "Eyecam",
+    text: "Product that lets you edit your favorite photos and videos at any time",
+    screenshot: eyecam,
+  },
+
+  {
+    id: 3,
+    title: "Faceit",
+    text: "Get to meet your favorite internet superstar with the faceit app",
+    screenshot: faceit,
+  },
+
+  {
+    id: 4,
+    title: "Todo",
+    text: "A todo app that features cloud sync with light and dark mode",
+    screenshot: todo,
+  },
+
+  {
+    id: 5,
+    title: "Loopstudios",
+    text: "A VR experience app made for Loopstudios",
+    screenshot: loopstudios,
+  },
+];
 
 export const socials = [
   `<path

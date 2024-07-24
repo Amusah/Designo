@@ -6,13 +6,13 @@ import { shared } from "../assets";
 
 const { rightArrow } = shared.desktop;
 
-const Projects = ({ children, serviceImg1, serviceImg2, service1, service2 }) => {
+const Projects = ({ children, serviceImg1, serviceImg2, service1, service2, routesArray }) => {
   return (
     <section className={styles.container}>
       <div className={styles.projectContainer}>{children}</div>
 
       <div className={styles.serviceContainer}>
-        <Link className={styles.link} to={"/webdesign"}>
+        <Link className={styles.link} to={`${routesArray[0]}`}>
           <img className={styles.serviceImg} src={serviceImg1} alt="picture of service offered" />
           <div className={styles.overlay}>
             <h2>{service1}</h2>
@@ -23,7 +23,7 @@ const Projects = ({ children, serviceImg1, serviceImg2, service1, service2 }) =>
           </div>
         </Link>
 
-        <Link className={styles.link} to={"/webdesign"}>
+        <Link className={styles.link} to={`${routesArray[1]}`}>
           <img className={styles.serviceImg} src={serviceImg2} alt="picture of service offered" />
           <div className={styles.overlay}>
             <h2>{service2}</h2>

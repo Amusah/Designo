@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 import { navLinks } from "../constants";
 import { shared } from "../assets";
@@ -32,7 +33,9 @@ const Navbar = ({ toggle, setToggle }) => {
 
   return (
     <nav className={`${styles.nav}`}>
-      <img className={styles.navLogo} src={logoDark} alt="logo" />
+      <NavLink to={"/"}>
+        <img className={styles.navLogo} src={logoDark} alt="logo" />
+      </NavLink>
       <ul
         className={`${styles.navLinks} ${
           isMobile ? (toggle ? "displayNav" : "") : ""
@@ -46,7 +49,7 @@ const Navbar = ({ toggle, setToggle }) => {
             }`}
             onClick={isMobile ? handleToggleNav : undefined}
           >
-            {link.title}
+            <NavLink to={link.route}>{link.title}</NavLink>
           </li>
         ))}
       </ul>
