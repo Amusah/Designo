@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import './index.scss'
 
+import ScrollToTop from './Components/ScrollToTop';
 import Homepage from './pages/Homepage';
 import WebDesign from './pages/WebDesign';
 import AppDesign from './pages/AppDesign';
@@ -15,6 +16,7 @@ function App() {
 
   return (
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route index element={<Homepage toggle={toggle} setToggle={setToggle} />} />
           
