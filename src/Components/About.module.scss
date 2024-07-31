@@ -1,0 +1,88 @@
+@import "../mixins.scss";
+
+.bannerContainer {
+  background-color: var(--peach);
+  height: 48rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bgPattern {
+  position: absolute;
+  bottom: 0%;
+}
+
+.bannerText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 8rem;
+  gap: 3.2rem;
+  width: 40%;
+
+  h1 {
+    color: var(--white);
+    // margin-bottom: 3.2rem;
+    @include font-h1;
+  }
+
+  p {
+    color: var(--white);
+    @include body-font;
+  }
+}
+
+
+/**************Card Component***************/
+.cardComponent{
+  margin-top: 15rem;
+}
+
+@media screen and (width <= 1070px) {
+  .bannerContainer {
+    flex-direction: column-reverse;
+    // height: 63.2rem;
+    height: 80vh;
+  }
+
+  .bannerText {
+    width: 100%;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .heroImage {
+    height: 60%;
+    // object-fit: fill;
+  }
+}
+
+@media screen and (width <= 660px) {
+  .bannerContainer {
+    border-radius: 0 !important;
+  }
+
+  .bgPattern {
+    top: 25%;
+    right: 0;
+    // bottom: 0%;
+  }
+
+  .bannerText {
+    padding: 5rem 4rem;
+    h1 {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
