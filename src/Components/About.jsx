@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 import Navbar from "./Navbar";
+import CardLarge from "./CardLarge";
+import Location from "./Location";
+import Footer from "./Footer";
 import styles from "./About.module.scss";
 
-import { about } from "../assets";
+import { about, shared } from "../assets";
 
 const { bgPatternHeroAbout, aboutHero, realDeal, worldClass } = about.desktop;
 const { aboutHeroTablet, realDealTablet, worldClassTablet } = about.tablet;
@@ -16,34 +19,86 @@ const {
 
 const About = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 660);
-  const [isTablet, setIsTablet] = useState(window.innerWidth > 660 && window.innerWidth <= 1070)
+  const [isTablet, setIsTablet] = useState(
+    window.innerWidth > 660 && window.innerWidth <= 1070
+  );
 
-  function checkView(){
-    if(window.innerWidth <= 660){
+  function checkView() {
+    if (window.innerWidth <= 660) {
       setIsMobile(true);
     }
 
-    if(window.innerWidth > 660 && window.innerWidth <= 1070){
+    if (window.innerWidth > 660 && window.innerWidth <= 1070) {
       setIsTablet(true);
     }
   }
 
-
   useEffect(() => {
-    // checkMobileView();
+    checkView();
 
     window.addEventListener("resize", checkView);
     return () => window.removeEventListener("resize", checkView);
   }, [isMobile, isTablet]);
 
   return (
-    <div className="container">
-      <Navbar />
-      <main>
-        <Banner isMobile={isMobile} isTablet={isTablet} />
-        <Card isMobile={isMobile} isTablet={isTablet} />
-      </main>
-    </div>
+    <>
+      <div className="container">
+        <Navbar />
+        <main>
+          <Banner isMobile={isMobile} isTablet={isTablet} />
+          <CardLarge
+            imgScr={
+              // worldClassMobile
+              isMobile
+                ? worldClassMobile
+                : isTablet
+                ? worldClassTablet
+                : worldClass
+            }
+          >
+            <h2>World-class talent</h2>
+            <p>
+              We are a crew of strategists, problem-solvers, and technologists.
+              Every design is thoughtfully crafted from concept to launch,
+              ensuring success in its given market. We are constantly updating
+              our skills in a myriad of platforms.
+            </p>
+            <p>
+              Our team is multi-disciplinary and we are not merely interested in
+              form — content and meaning are just as important. We give great
+              importance to craftsmanship, service, and prompt delivery. Clients
+              have always been impressed with our high-quality outcomes that
+              encapsulates their brand’s story and mission.
+            </p>
+          </CardLarge>
+
+          <Location />
+
+          <CardLarge
+            type={"left"}
+            imgScr={
+              // worldClassMobile
+              isMobile ? realDealMobile : isTablet ? realDealTablet : realDeal
+            }
+          >
+            <h2>World-class talent</h2>
+            <p>
+              As strategic partners in our clients’ businesses, we are ready to
+              take on any challenge as our own. Solving real problems require
+              empathy and collaboration, and we strive to bring a fresh
+              perspective to every opportunity. We make design and technology
+              more accessible and give you tools to measure success.
+            </p>
+            <p>
+              We are visual storytellers in appealing and captivating ways. By
+              combining business and marketing strategies, we inspire audiences
+              to take action and drive real results.
+            </p>
+          </CardLarge>
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 };
 
@@ -66,16 +121,13 @@ function Banner({ isMobile, isTablet }) {
         </p>
       </div>
       {/* <img className={styles.heroImage} src={isMobile ? aboutHeroMobile : aboutHero} alt="hero-image" /> */}
-      <img className={styles.heroImage} src={isMobile ? aboutHeroMobile : isTablet ? aboutHeroTablet : aboutHero} alt="hero-image" />
-    </div>
-  );
-}
-
-function Card({ isMobile, isTablet }){
-  return (
-    <div className={styles.cardComponent}>
-      
-      <img src={isMobile ? worldClassMobile : isTablet ? worldClassTablet : worldClass} alt="Image of a lady" />
+      <img
+        className={styles.heroImage}
+        src={
+          isMobile ? aboutHeroMobile : isTablet ? aboutHeroTablet : aboutHero
+        }
+        alt="hero-image"
+      />
     </div>
   );
 }

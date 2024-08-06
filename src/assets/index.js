@@ -30,6 +30,9 @@ import australia from "./shared/desktop/illustration-australia.svg";
 import canada from "./shared/desktop/illustration-canada.svg";
 import threeCircles from "./shared/desktop/bg-pattern-three-circles.svg";
 import twoCircles from './shared/desktop/bg-pattern-two-circles.svg';
+// import canadaImg from './shared/desktop/illustration-canada.svg';
+// import australiaImg from './shared/desktop/illustration-australia.svg';
+// import ukImg from './shared/desktop/illustration-united-kingdom.svg';
 
 // Web design
 import bgPatternIntroWeb from "./web-design/desktop/bg-pattern-intro-web.svg";

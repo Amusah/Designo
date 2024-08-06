@@ -5,22 +5,23 @@ const { circle, facebook, instagram, twitter, pinterest, youtube } = shared.desk
 const { bloger, builder, camp, express, photon, transfer } = web.desktop;
 const { airfiller, eyecam, faceit, loopstudios, todo } = app;
 const { bgPatternIntroGraphic, boxedwater, change, science} = graphic;
+const { australia, canada, unitedKingdom } = shared.desktop;
 
 export const navLinks = [
   {
     id: "home",
     title: "Our Company",
-    route: "about",
+    route: "/about",
   },
   {
     id: "locations",
     title: "Locations",
-    route: "location",
+    route: "/location",
   },
   {
     id: "contact",
     title: "Contact",
-    route: "contact",
+    route: "/contact",
   },
 ];
 
@@ -51,6 +52,26 @@ export const features = [
     content:
       " We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.",
   },
+];
+
+export const locations = [
+  {
+    name: "Canada",
+    illustration: canada,
+    bgPattern: circle,
+  },
+
+  {
+    name: "Australia",
+    illustration: australia,
+    bgPattern: circle,
+  },
+
+  {
+    name: "United Kingdom",
+    illustration: unitedKingdom,
+    bgPattern: circle,
+  }
 ];
 
 export const webProjects = [

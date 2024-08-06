@@ -22,6 +22,26 @@
   }
 }
 
+.btnPeach{
+  padding: 2rem;
+  // width: 15.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--peach);
+  // font-size: 1.5rem;
+  // z-index: 5;
+
+  &:hover {
+    background-color: var(--lightPeach);
+  }
+}
+
+
+// button types
 .heroBtn {
   width: 15.2rem;
 }
