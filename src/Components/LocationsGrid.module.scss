@@ -1,0 +1,121 @@
+@import "../mixins.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 38rem;
+}
+
+.location {
+  position: relative;
+  background-color: rgb(253 243 240);
+  border-radius: 1.5rem;
+  height: 32.6rem;
+  padding: 10rem;
+  // width: 100%;
+
+  h2 {
+    color: var(--peach);
+    margin-bottom: 2.4rem;
+    @include font-h2;
+  }
+}
+
+.canada,
+.uk,
+.australia {
+  grid-column: span 2;
+}
+
+.map {
+  height: 32.6rem;
+  width: 100%;
+}
+
+.bgPattern {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.address {
+  display: flex;
+  gap: 6rem;
+  // width: 25.5rem;
+
+  p {
+    @include body-font;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (width <= 850px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .canadaMap {
+    grid-row-start: 1;
+    grid-column: span 3;
+  }
+
+  .canada,
+  .australia,
+  .uk {
+    grid-column: span 3;
+  }
+
+  .australiaMap {
+    grid-row-start: 3;
+    grid-column: span 3;
+  }
+
+  .ukMap {
+    grid-row-start: 5;
+    grid-column: span 3;
+  }
+
+  .canada,
+  .australia {
+    margin-bottom: 10rem;
+  }
+}
+
+@media screen and (width <= 660px) {
+  .container {
+    gap: 0;
+  }
+
+  .location {
+    overflow-x: hidden;
+    text-align: center;
+    height: 40rem;
+    padding: 5rem 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+      font-size: 3.2rem;
+    }
+
+    .address {
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+  }
+
+  .canada,
+  .australia {
+    margin-bottom: 5rem;
+  }
+
+  .canadaMap, .australiaMap, .ukMap{
+    border-radius: 0 !important;
+  }
+}

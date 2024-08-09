@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Button from "./Button";
 import styles from "./Location.module.scss";
 
@@ -16,7 +18,9 @@ const Location = () => {
             <img className={styles.bgPattern} src={location.bgPattern} alt="" />
           </div>
           <h3>{location.name}</h3>
-          <Button color={"btnPeach"}>See Location</Button>
+          <Link to={"/locations"}>
+            <Button color={"btnPeach"}>See Location</Button>
+          </Link>
         </div>
       ))}
     </div>

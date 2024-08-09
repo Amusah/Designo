@@ -1,13 +1,13 @@
 @import "../mixins.scss";
 
-.bannerContainer {
-  background-color: var(--peach);
-  height: 48rem;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-}
+// .bannerContainer {
+//   background-color: var(--peach);
+//   height: 48rem;
+//   position: relative;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 .bgPattern {
   position: absolute;
@@ -35,11 +35,11 @@
 }
 
 @media screen and (width <= 1070px) {
-  .bannerContainer {
-    flex-direction: column-reverse;
-    // height: 63.2rem;
-    height: 80vh;
-  }
+  // .bannerContainer {
+  //   flex-direction: column-reverse;
+  //   // height: 63.2rem;
+  //   height: 80vh;
+  // }
 
   .bannerText {
     width: 100%;
@@ -59,9 +59,9 @@
 }
 
 @media screen and (width <= 660px) {
-  .bannerContainer {
-    border-radius: 0 !important;
-  }
+  // .bannerContainer {
+  //   border-radius: 0 !important;
+  // }
 
   .bgPattern {
     top: 25%;

@@ -71,6 +71,15 @@ import aboutHeroMobile from "./about/mobile/image-about-hero.jpg";
 import realDealMobile from "./about/mobile/image-real-deal.jpg";
 import worldClassMobile from "./about/mobile/image-world-class-talent.jpg";
 
+// Locations
+import mapAustralia from './locations/desktop/image-map-australia.png';
+import mapCanada from "./locations/desktop/image-map-canada.png";
+import mapUk from "./locations/desktop/image-map-united-kingdom.png";
+
+import mapAustraliaTablet from "./locations/tablet/image-map-australia.png";
+import mapCanadaTablet from "./locations/tablet/image-map-canada.png";
+import mapUkTablet from "./locations/tablet/image-map-uk.png";
+
 export const about = {
   desktop: {
     bgPatternHeroAbout,
@@ -134,6 +143,11 @@ export const graphic = {
   change,
   science,
 };
+
+export const locations = {
+  desktop: { mapAustralia, mapCanada, mapUk },
+  tablet: { mapAustraliaTablet, mapCanadaTablet, mapUkTablet }
+}
 
 export const shared = {
   desktop: {

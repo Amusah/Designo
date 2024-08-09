@@ -16,7 +16,7 @@ export const navLinks = [
   {
     id: "locations",
     title: "Locations",
-    route: "/location",
+    route: "/locations",
   },
   {
     id: "contact",

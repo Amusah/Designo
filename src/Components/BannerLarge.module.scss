@@ -1,0 +1,22 @@
+.bannerContainer {
+  background-color: var(--peach);
+  height: 48rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (width <= 1070px) {
+  .bannerContainer {
+    flex-direction: column-reverse;
+    // height: 63.2rem;
+    height: 80vh;
+  }
+}
+
+@media screen and (width <= 660px) {
+  .bannerContainer {
+    border-radius: 0 !important;
+  }
+}

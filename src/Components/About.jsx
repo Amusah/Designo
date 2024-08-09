@@ -4,9 +4,11 @@ import Navbar from "./Navbar";
 import CardLarge from "./CardLarge";
 import Location from "./Location";
 import Footer from "./Footer";
+import BannerLarge from "./BannerLarge";
+
 import styles from "./About.module.scss";
 
-import { about, shared } from "../assets";
+import { about } from "../assets";
 
 const { bgPatternHeroAbout, aboutHero, realDeal, worldClass } = about.desktop;
 const { aboutHeroTablet, realDealTablet, worldClassTablet } = about.tablet;
@@ -16,6 +18,7 @@ const {
   realDealMobile,
   worldClassMobile,
 } = about.mobile;
+
 
 const About = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 660);
@@ -45,7 +48,37 @@ const About = () => {
       <div className="container">
         <Navbar />
         <main>
-          <Banner isMobile={isMobile} isTablet={isTablet} />
+          <BannerLarge>
+            <img
+              className={styles.bgPattern}
+              src={isMobile ? bgPatternHeroAboutMobile : bgPatternHeroAbout}
+              alt="blob pattern image"
+            />
+            <div className={styles.bannerText}>
+              <h1>About Us</h1>
+              <p>
+                Founded in 2010, we are a creative agency that produces lasting
+                results for our clients. We’ve partnered with many startups,
+                corporations, and nonprofits alike to craft designs that make
+                real impact. We’re always looking forward to creating brands,
+                products, and digital experiences that connect with our clients’
+                audiences.
+              </p>
+            </div>
+
+            <img
+              className={styles.heroImage}
+              src={
+                isMobile
+                  ? aboutHeroMobile
+                  : isTablet
+                  ? aboutHeroTablet
+                  : aboutHero
+              }
+              alt="hero-image"
+            />
+          </BannerLarge>
+
           <CardLarge
             imgScr={
               // worldClassMobile
@@ -97,39 +130,18 @@ const About = () => {
           </CardLarge>
         </main>
       </div>
+
       <Footer />
     </>
   );
 };
 
-function Banner({ isMobile, isTablet }) {
-  return (
-    <div className={`${styles.bannerContainer} border-radius`}>
-      <img
-        className={styles.bgPattern}
-        src={isMobile ? bgPatternHeroAboutMobile : bgPatternHeroAbout}
-        alt="blob pattern image"
-      />
-      <div className={styles.bannerText}>
-        <h1>About Us</h1>
-        <p>
-          Founded in 2010, we are a creative agency that produces lasting
-          results for our clients. We’ve partnered with many startups,
-          corporations, and nonprofits alike to craft designs that make real
-          impact. We’re always looking forward to creating brands, products, and
-          digital experiences that connect with our clients’ audiences.
-        </p>
-      </div>
-      {/* <img className={styles.heroImage} src={isMobile ? aboutHeroMobile : aboutHero} alt="hero-image" /> */}
-      <img
-        className={styles.heroImage}
-        src={
-          isMobile ? aboutHeroMobile : isTablet ? aboutHeroTablet : aboutHero
-        }
-        alt="hero-image"
-      />
-    </div>
-  );
-}
+// export function BannerLarge({ children }) {
+//   return (
+//     <div className={`${styles.bannerContainer} border-radius`}>
+//       {children}
+//     </div>
+//   );
+// }
 
 export default About;
