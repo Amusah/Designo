@@ -8,10 +8,10 @@ import CTA from "./CTA";
 const { logoLight } =
   shared.desktop;
 
-const Footer = () => {
+const Footer = ({ cta }) => {
   return (
       <footer className={styles.footerContainer}>
-      <CTA />
+      {cta}
         <div className={`${styles.footer} container`}>
           <nav className={`${styles.footerNav} `}>
             <img className={styles.navLogo} src={logoLight} alt="brand logo" />

@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar";
 import Banner from "../Components/Banner";
 import Webdesign from "../Components/WebDesign";
 import Footer from "../Components/Footer";
+import CTA from "../Components/CTA";
 import Blob from "../Components/Blob";
 
 import { web } from "../assets";
@@ -26,7 +27,7 @@ const WebDesign = () => {
 
         <Webdesign />
       </div>
-      <Footer />
+      <Footer cta={<CTA />} />
     </>
   );
 };

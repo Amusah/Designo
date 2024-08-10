@@ -4,6 +4,7 @@ import Navbar from '../Components/Navbar';
 import Banner from '../Components/Banner';
 import Graphic from '../Components/GraphicDesign';
 import Footer from '../Components/Footer';
+import CTA from "../Components/CTA";
 
 import { graphic } from '../assets';
 
@@ -29,7 +30,7 @@ const GraphicDesign = () => {
 
         <Graphic />
       </div>
-      <Footer />
+      <Footer cta={<CTA />} />
     </>
   );
 }

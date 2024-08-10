@@ -80,6 +80,11 @@ import mapAustraliaTablet from "./locations/tablet/image-map-australia.png";
 import mapCanadaTablet from "./locations/tablet/image-map-canada.png";
 import mapUkTablet from "./locations/tablet/image-map-uk.png";
 
+// Contact
+import bgPatternHeroContact from './contact/desktop/bg-pattern-hero-desktop.svg';
+import iconError from './contact/desktop/icon-error.svg';
+import bgPatternHeroContactMobile from './contact/mobile/bg-pattern-hero-contact-mobile.svg';
+
 export const about = {
   desktop: {
     bgPatternHeroAbout,
@@ -148,6 +153,11 @@ export const locations = {
   desktop: { mapAustralia, mapCanada, mapUk },
   tablet: { mapAustraliaTablet, mapCanadaTablet, mapUkTablet }
 }
+
+export const contact = {
+  desktop: { bgPatternHeroContact, iconError },
+  mobile: { bgPatternHeroContactMobile }
+};
 
 export const shared = {
   desktop: {

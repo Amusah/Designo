@@ -4,6 +4,7 @@ import Navbar from '../Components/Navbar';
 import Banner from '../Components/Banner';
 import Appdesign from '../Components/AppDesign';
 import Footer from '../Components/Footer';
+import CTA from "../Components/CTA";
 
 import { app } from '../assets';
 
@@ -25,7 +26,7 @@ const AppDesign = () => {
 
         <Appdesign />
       </div>
-      <Footer />
+      <Footer cta={<CTA />} />
     </>
   );
 }

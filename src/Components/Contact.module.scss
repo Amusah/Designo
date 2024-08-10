@@ -1,0 +1,150 @@
+@import "../mixins.scss";
+
+.bannerContainer {
+  background-color: var(--peach);
+  // height: 48rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rem;
+}
+
+.bannerText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 8rem;
+  gap: 3.2rem;
+  width: 40%;
+
+  h1 {
+    color: var(--white);
+    // margin-bottom: 3.2rem;
+    @include font-h1;
+  }
+
+  p {
+    color: var(--white);
+    @include body-font;
+  }
+}
+
+.bgPattern {
+  position: absolute;
+  bottom: 0%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  padding: 8rem;
+  gap: 2.5rem;
+  width: 50%;
+
+  input,
+  textarea {
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    border-bottom: 0.1rem solid var(--white);
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    @include body-font;
+
+    &::placeholder {
+      color: rgb(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      border-bottom: 0.2rem solid var(--white);
+    }
+  }
+
+  Button {
+    align-self: flex-end;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  p {
+    position: absolute;
+    right: 0%;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 2.6rem;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.location {
+  margin-bottom: 20rem;
+}
+
+@media screen and (width <= 1070px) {
+  .bannerContainer {
+    flex-direction: column;
+    padding: 8rem 0;
+    gap: 5rem;
+  }
+
+  .bannerText {
+    width: 100%;
+  }
+
+  .bgPattern {
+    top: 0%;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (width <= 660px) {
+  .bannerContainer {
+    border-radius: 0 !important;
+  }
+
+  .bannerText {
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    h1 {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .bgPattern {
+    top: 15%;
+    left: 0%;
+  }
+
+  .form {
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    Button {
+      align-self: center;
+      margin-top: 2rem;
+    }
+  }
+}
