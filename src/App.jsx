@@ -10,7 +10,7 @@ import LoadingSpinner from "./Components/LoadingSpinner";
 // import GraphicDesign from './pages/GraphicDesign';
 // import AboutPage from './pages/AboutPage';
 // import LocationsPage from './pages/LocationsPage';
-// import ContactPage from './pages/ContactPage';
+import ContactPage from './pages/ContactPage';
 // import PageNotFound from './pages/PageNotFound';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -21,7 +21,7 @@ const AppDesign = lazy(() => import("./pages/AppDesign"));
 const GraphicDesign = lazy(() => import("./pages/GraphicDesign"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const LocationsPage = lazy(() => import("./pages/LocationsPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
+// const ContactPage = lazy(() => import("./pages/ContactPage"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
 function App() {

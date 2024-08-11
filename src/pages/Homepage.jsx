@@ -7,11 +7,11 @@ import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 import CTA from "../Components/CTA";
 
-function Homepage({ toggle, setToggle }) {
+function Homepage() {
   return (
     <>
       <div className="container">
-        <Navbar toggle={toggle} setToggle={setToggle} />
+        <Navbar />
         <Hero />
         <Services />
         <Features />
