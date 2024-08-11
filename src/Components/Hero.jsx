@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Button from './Button';
 import { home } from "../assets";
@@ -18,7 +19,9 @@ const Hero = () => {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about our services.
           </p>
-          <Button type={'heroBtn'} color={'btnWhite'}>Learn More</Button>
+          <Link to={'/contact'}>
+            <Button type={'heroBtn'} color={'btnWhite'}>Learn More</Button>
+          </Link>
         </div>
 
         <div className={styles.heroImage}>

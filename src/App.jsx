@@ -15,13 +15,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
-  const [toggle, setToggle] = useState(false);
+  // const [toggle, setToggle] = useState(false);
 
   return (
       <BrowserRouter>
       <ScrollToTop />
         <Routes>
-          <Route index element={<Homepage toggle={toggle} setToggle={setToggle} />} />
+          <Route index element={<Homepage />} />
           
           <Route path="webdesign" element={<WebDesign />} />
           <Route path='appdesign' element={<AppDesign />} />

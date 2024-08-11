@@ -5,6 +5,7 @@ import CardLarge from "./CardLarge";
 import Location from "./Location";
 import Footer from "./Footer";
 import BannerLarge from "./BannerLarge";
+import CTA from "./CTA";
 
 import styles from "./About.module.scss";
 
@@ -131,7 +132,7 @@ const About = () => {
         </main>
       </div>
 
-      <Footer />
+      <Footer cta={<CTA />} />
     </>
   );
 };

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import Navbar from "./Navbar";
-import BannerLarge from "./BannerLarge";
 import Location from "./Location";
 import Footer from "./Footer";
-import CTA from "./CTA";
 import Button from "./Button";
 import styles from "./Contact.module.scss";
 

@@ -22,6 +22,10 @@
   overflow: hidden;
 }
 
+.ctaLink{
+  z-index: 5;
+}
+
 .ctaText {
   h2 {
     @include font-h2();

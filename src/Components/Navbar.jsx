@@ -12,8 +12,8 @@ const { close, hamburger } = shared.mobile;
 
 
 
-const Navbar = ({ toggle, setToggle }) => {
-  // const [toggle, setToggle] = useState(false);
+const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 660);
 
   function checkMobileView() {
@@ -49,7 +49,7 @@ const Navbar = ({ toggle, setToggle }) => {
             }`}
             onClick={isMobile ? handleToggleNav : undefined}
           >
-            <NavLink to={link.route}>{link.title}</NavLink>
+            <NavLink className={styles.anchor} to={link.route}>{link.title}</NavLink>
           </li>
         ))}
       </ul>

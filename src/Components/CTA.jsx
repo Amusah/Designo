@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Button from "./Button";
 import styles from "./CTA.module.scss";
@@ -20,9 +21,11 @@ const CTA = () => {
               how our expertise can help your business grow.
             </p>
           </div>
-          <Button type={"ctaBtn"} color={"btnWhite"}>
-            Get in touch
-          </Button>
+          <Link className={styles.ctaLink} to={'/contact'}>
+            <Button type={"ctaBtn"} color={"btnWhite"}>
+              Get in touch
+            </Button>
+          </Link>
           <img
             className={styles.ctaBg}
             src={bgCta}

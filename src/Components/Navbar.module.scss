@@ -75,6 +75,10 @@
     .link {
       font-size: 2rem;
       color: var(--white);
+
+      .anchor{
+        color: var(--white);
+      }
     }
   }
 }
