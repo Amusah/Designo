@@ -18,7 +18,11 @@ const Contact = () => {
   const [isTablet, setIsTablet] = useState(
     window.innerWidth > 660 && window.innerWidth <= 1070
   );
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
 
   function checkView() {
     if (window.innerWidth <= 660) {
@@ -37,11 +41,48 @@ const Contact = () => {
     return () => window.removeEventListener("resize", checkView);
   }, [isMobile, isTablet]);
 
+  // Handle form submit
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const newErrors = {};
+
+    if (name.trim() === "") {
+      newErrors.name = "Can't be empty";
+    } else {
+      if (name.trim().length < 3)
+        newErrors.name = "Can't be less than 3 characters";
+    }
+
+    if (email.trim() === "") {
+      newErrors.email = "Can't be empty";
+    }
+
+    if (phone.trim() === "") {
+      newErrors.phone = "Can't be empty";
+    } else {
+      if (phone.trim().length < 10)
+        newErrors.phone = "Can't be less than 10 numbers";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    } else {
+      setErrors({});
+    }
+
+    setName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  }
+
   return (
     <>
       <div className="container">
         <Navbar />
-        
+
         <div className={`${styles.bannerContainer} border-radius`}>
           <img
             className={styles.bgPattern}
@@ -58,31 +99,62 @@ const Contact = () => {
               your users, drop us a line.
             </p>
           </div>
-          <form className={styles.form} action="">
+          <form
+            className={styles.form}
+            action=""
+            autoComplete="off"
+            onSubmit={handleFormSubmit}
+          >
             <span className={styles.inputWrapper}>
-              <input type="text" name="name" placeholder="Name" />
-              <p>
-                Can’t be empty <img src={iconError} alt="caution" />
-              </p>
+              <input
+                value={name}
+                type="text"
+                name="name"
+                placeholder="Name"
+                onChange={(e) => setName(e.target.value)}
+              />
+              {errors.name && (
+                <p>
+                  {errors.name} <img src={iconError} alt="caution" />
+                </p>
+              )}
             </span>
             <span className={styles.inputWrapper}>
-              <input type="email" name="email" placeholder="Email Address" />
-              <p>
-                Can’t be empty <img src={iconError} alt="caution" />
-              </p>
+              <input
+                value={email}
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              {errors.email && (
+                <p>
+                  {errors.email} <img src={iconError} alt="caution" />
+                </p>
+              )}
             </span>
             <span className={styles.inputWrapper}>
-              <input type="text" name="phone" placeholder="Phone" />
-              <p>
-                Can’t be empty <img src={iconError} alt="caution" />
-              </p>
+              <input
+                value={phone}
+                type="text"
+                name="phone"
+                placeholder="Phone"
+                onChange={(e) => setPhone(e.target.value)}
+              />
+              {errors.phone && (
+                <p>
+                  {errors.phone} <img src={iconError} alt="caution" />
+                </p>
+              )}
             </span>
             <textarea
+              value={message}
               name="message"
               id=""
               cols="30"
               rows="4"
               placeholder="Your Message"
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <Button action={"submit"} color={"btnWhite"} type={"heroBtn"}>
               Submit
@@ -90,7 +162,7 @@ const Contact = () => {
           </form>
         </div>
         <div className={styles.location}>
-        <Location />
+          <Location />
         </div>
       </div>
       <Footer />
